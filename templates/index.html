@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Sistema inteligente de orientación vocacional basado en aprendizaje automático"
+    >
+
+    <title>Test vocacional con IA</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='estilos.css') }}"
+    >
+</head>
+
+<body>
+    <!--  ENCABEZADO PRINCIPAL -->
+    <header class="encabezado">
+        <div class="contenedor encabezado-contenido">
+            <div class="encabezado-texto">
+                <p class="etiqueta">
+                    Diseño de un prototipo de sistema de inteligencia artificial para la recomendación de carreras universitarias.
+                </p>
+
+                <h1>
+                    Descubre las áreas profesionales que mejor se relacionan contigo
+                </h1>
+
+                <p class="subtitulo">
+                    Responde una serie de afirmaciones sobre tus intereses,
+                    habilidades y preferencias. El sistema analizará tus respuestas
+                    mediante un modelo de aprendizaje automático.
+                </p>
+            </div>
+
+            <aside class="tarjeta-resumen" aria-label="Resumen del cuestionario">
+                <span class="numero-grande">
+                    {{total_preguntas}}
+                </span>
+
+                <span class="texto-resumen">
+                    preguntas
+                </span>
+
+                <span class="separador"></span>
+
+                <span class="texto-resumen">
+                    Escala de respuesta del 1 al 5
+                </span>
+            </aside>
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor contenido-principal">
+
+        <!-- Error al cargar el modelo -->
+        {% if error_carga %}
+            <section class="alerta alerta-error" role="alert">
+                <h2>
+                    No fue posible iniciar el sistema
+                </h2>
+
+                <p>
+                    {{ error_carga }}
+                </p>
+
+                <p>
+                    Comprueba que los siguientes archivos estén en la misma
+                    carpeta que <code>app.py</code>:
+                </p>
+
+                <ul>
+                    <li><code>modelo_vocacional.pkl</code></li>
+                    <li><code>columnas_modelo.pkl</code></li>
+                    <li><code>preguntas_modelo.pkl</code></li>
+                </ul>
+
+                <p>
+                    También puedes volver a ejecutar:
+                    <code>python entrenar_modelo.py</code>
+                </p>
+            </section>
+
+        {% else %}
+
+            <!-- INSTRUCCIONES -->
+            <section class="instrucciones">
+                <div>
+                    <p class="etiqueta">
+                        Instrucciones
+                    </p>
+
+                    <h2>
+                        Responde con sinceridad
+                    </h2>
+
+                    <p>
+                        No existen respuestas correctas o incorrectas.
+                        Selecciona la opción que mejor represente cuánto te
+                        identificas con cada afirmación.
+                    </p>
+                </div>
+
+                <div class="escala-leyenda" aria-label="Escala de respuestas">
+                    {% for valor, texto in escala.items() %}
+                        <span>
+                            <strong>{{ valor }}</strong>
+                            <small>{{ texto }}</small>
+                        </span>
+                    {% endfor %}
+                </div>
+            </section>
+
+
+            <!-- ERRORES DE VALIDACIÓN DEL SERVIDOR -->
+            {% if errores %}
+                <section class="alerta alerta-error" role="alert">
+                    <h2>
+                        Revisa el cuestionario
+                    </h2>
+
+                    <p>
+                        No se pudo procesar el formulario por los siguientes motivos:
+                    </p>
+
+                    <ul>
+                        {% for error in errores %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endif %}
+
+
+            <!--FORMULARIO VOCACIONAL-->
+            <form
+                action="{{ url_for('predecir') }}"
+                method="post"
+                id="formulario-vocacional"
+                novalidate
+            >
+                <!-- Barra de progreso -->
+                <section class="barra-superior-formulario">
+                    <div>
+                        <strong id="texto-progreso">
+                            0 de {{ total_preguntas }} respondidas
+                        </strong>
+
+                        <small id="porcentaje-progreso">
+                            0% completado
+                        </small>
+                    </div>
+
+                    <div
+                        class="barra-progreso"
+                        role="progressbar"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="0"
+                        id="barra-progreso"
+                    >
+                        <div id="relleno-progreso"></div>
+                    </div>
+                </section>
+
+
+                <!-- Lista de preguntas -->
+                <div class="lista-preguntas">
+                    {% for columna in columnas %}
+                        <div
+                            class="tarjeta-pregunta"
+                            data-pregunta="{{ loop.index }}"
+                        >
+                            <legend>
+                                <span class="numero-pregunta">
+                                    {{ loop.index }}
+                                </span>
+
+                                <span>
+                                    {{ preguntas[columna] }}
+                                </span>
+                            </legend>
+
+                            <div class="opciones-respuesta">
+                                {% for valor, texto in escala.items() %}
+                                    <label class="opcion">
+                                        <input
+                                            type="radio"
+                                            name="{{ columna }}"
+                                            value="{{ valor }}"
+                                            aria-label="{{ valor }} - {{ texto }}"
+                                            {% if respuestas.get(columna) == valor|string %}
+                                                checked
+                                            {% endif %}
+                                            required
+                                        >
+
+                                        <span class="opcion-contenido">
+                                            <strong>
+                                                {{ valor }}
+                                            </strong>
+
+                                            <small>
+                                                {{ texto }}
+                                            </small>
+                                        </span>
+                                    </label>
+                                {% endfor %}
+                            </div>
+
+                            <p class="mensaje-pregunta" aria-live="polite"></p>
+                        </div>
+                    {% endfor %}
+                </div>
+
+
+                <!-- Mensaje general del formulario -->
+                <div
+                    id="mensaje-formulario"
+                    class="mensaje-formulario"
+                    role="alert"
+                    aria-live="assertive"
+                    hidden
+                ></div>
+
+
+                <!-- Acciones -->
+                <section class="acciones-formulario">
+                    <div>
+                        <strong>
+                            Importante
+                        </strong>
+
+                        <p>
+                            Este resultado es orientativo y no reemplaza el
+                            acompañamiento de un orientador vocacional o profesional.
+                        </p>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="boton-principal"
+                        id="boton-enviar"
+                        {% if not columnas %}
+                            disabled
+                        {% endif %}
+                    >
+                        Analizar mi perfil
+                    </button>
+                </section>
+            </form>
+
+        {% endif %}
+    </main>
+
+
+    <!-- PIE DE PÁGINA-->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>
+                Diseño de un prototipo de sistema de inteligencia artificial para la recomendación de carreras universitarias.
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const formulario = document.getElementById(
+            "formulario-vocacional"
+        );
+
+        if (formulario) {
+            const totalPreguntas = Number(
+                "{{ total_preguntas }}"
+            );
+
+            const textoProgreso = document.getElementById(
+                "texto-progreso"
+            );
+
+            const porcentajeProgreso = document.getElementById(
+                "porcentaje-progreso"
+            );
+
+            const barraProgreso = document.getElementById(
+                "barra-progreso"
+            );
+
+            const rellenoProgreso = document.getElementById(
+                "relleno-progreso"
+            );
+
+            const mensajeFormulario = document.getElementById(
+                "mensaje-formulario"
+            );
+
+            const botonEnviar = document.getElementById(
+                "boton-enviar"
+            );
+
+
+            function obtenerPreguntasRespondidas() {
+                const seleccionadas = formulario.querySelectorAll(
+                    'input[type="radio"]:checked'
+                );
+
+                const nombresRespondidos = new Set();
+
+                seleccionadas.forEach((input) => {
+                    nombresRespondidos.add(input.name);
+                });
+
+                return nombresRespondidos.size;
+            }
+
+
+            function calcularPorcentaje(respondidas) {
+                if (totalPreguntas === 0) {
+                    return 0;
+                }
+
+                return Math.round(
+                    (respondidas / totalPreguntas) * 100
+                );
+            }
+
+
+            function actualizarProgreso() {
+                const respondidas = obtenerPreguntasRespondidas();
+                const porcentaje = calcularPorcentaje(respondidas);
+
+                textoProgreso.textContent =
+                    `${respondidas} de ${totalPreguntas} respondidas`;
+
+                porcentajeProgreso.textContent =
+                    `${porcentaje}% completado`;
+
+                rellenoProgreso.style.width =
+                    `${porcentaje}%`;
+
+                barraProgreso.setAttribute(
+                    "aria-valuenow",
+                    String(porcentaje)
+                );
+
+                if (respondidas === totalPreguntas) {
+                    botonEnviar.classList.add(
+                        "boton-listo"
+                    );
+                } else {
+                    botonEnviar.classList.remove(
+                        "boton-listo"
+                    );
+                }
+            }
+
+
+            function limpiarErroresVisuales() {
+                const tarjetas = formulario.querySelectorAll(
+                    ".tarjeta-pregunta"
+                );
+
+                tarjetas.forEach((tarjeta) => {
+                    tarjeta.classList.remove(
+                        "pregunta-incompleta"
+                    );
+
+                    const mensaje = tarjeta.querySelector(
+                        ".mensaje-pregunta"
+                    );
+
+                    if (mensaje) {
+                        mensaje.textContent = "";
+                    }
+                });
+
+                mensajeFormulario.hidden = true;
+                mensajeFormulario.textContent = "";
+            }
+
+
+            function obtenerPrimeraPreguntaIncompleta() {
+                const tarjetas = Array.from(
+                    formulario.querySelectorAll(
+                        ".tarjeta-pregunta"
+                    )
+                );
+
+                return tarjetas.find((tarjeta) => {
+                    return !tarjeta.querySelector(
+                        'input[type="radio"]:checked'
+                    );
+                });
+            }
+
+
+            function marcarPreguntasIncompletas() {
+                const tarjetas = formulario.querySelectorAll(
+                    ".tarjeta-pregunta"
+                );
+
+                tarjetas.forEach((tarjeta) => {
+                    const seleccionada = tarjeta.querySelector(
+                        'input[type="radio"]:checked'
+                    );
+
+                    if (!seleccionada) {
+                        tarjeta.classList.add(
+                            "pregunta-incompleta"
+                        );
+
+                        const mensaje = tarjeta.querySelector(
+                            ".mensaje-pregunta"
+                        );
+
+                        if (mensaje) {
+                            mensaje.textContent =
+                                "Selecciona una respuesta para continuar.";
+                        }
+                    }
+                });
+            }
+
+
+            formulario.addEventListener(
+                "change",
+                function (evento) {
+                    if (
+                        evento.target.matches(
+                            'input[type="radio"]'
+                        )
+                    ) {
+                        const tarjeta = evento.target.closest(
+                            ".tarjeta-pregunta"
+                        );
+
+                        if (tarjeta) {
+                            tarjeta.classList.remove(
+                                "pregunta-incompleta"
+                            );
+
+                            const mensaje = tarjeta.querySelector(
+                                ".mensaje-pregunta"
+                            );
+
+                            if (mensaje) {
+                                mensaje.textContent = "";
+                            }
+                        }
+
+                        mensajeFormulario.hidden = true;
+                        mensajeFormulario.textContent = "";
+
+                        actualizarProgreso();
+                    }
+                }
+            );
+
+
+            formulario.addEventListener(
+                "submit",
+                function (evento) {
+                    limpiarErroresVisuales();
+
+                    const respondidas =
+                        obtenerPreguntasRespondidas();
+
+                    if (respondidas !== totalPreguntas) {
+                        evento.preventDefault();
+
+                        marcarPreguntasIncompletas();
+
+                        const faltantes =
+                            totalPreguntas - respondidas;
+
+                        mensajeFormulario.textContent =
+                            `Faltan ${faltantes} pregunta(s) por responder.`;
+
+                        mensajeFormulario.hidden = false;
+
+                        const primeraIncompleta =
+                            obtenerPrimeraPreguntaIncompleta();
+
+                        if (primeraIncompleta) {
+                            primeraIncompleta.scrollIntoView({
+                                behavior: "smooth",
+                                block: "center"
+                            });
+
+                            const primerInput =
+                                primeraIncompleta.querySelector(
+                                    'input[type="radio"]'
+                                );
+
+                            if (primerInput) {
+                                setTimeout(() => {
+                                    primerInput.focus();
+                                }, 500);
+                            }
+                        }
+
+                        return;
+                    }
+
+                    botonEnviar.disabled = true;
+                    botonEnviar.textContent =
+                        "Analizando perfil...";
+                }
+            );
+
+
+            actualizarProgreso();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿id_estudiante;edad;genero;curso;ciudad;gusto_matematicas;gusto_programacion;interes_ciencia;gusto_diseno;gusto_escritura;gusto_numeros;interes_funcionamiento;gusto_ensenar;gusto_oratoria;interes_liderazgo;gusto_organizacion;gusto_experimentos;interes_salud;gusto_artistico;habilidad_matematica;pensamiento_logico;creatividad;comunicacion;liderazgo;trabajo_equipo;investigacion;organizacion_personal;resolucion_problemas;aprendizaje_tecnologia;gusto_construccion;gusto_tecnico;analisis_soluciones;investigacion_cientifica;expresion_creativa;orientacion_personas;liderazgo_grupos;persuasion;orden_informacion;trabajo_datos;areas_interes;carrera_elegida_hoy;carrera_interes_actual;seguridad_carrera;area_vocacional;codigo_area
+1;18;Masculino;Primero de Bachillerato;Machala;5;5;5;3;4;5;5;3;3;3;1;5;2;3;4;4;1;4;3;5;4;2;4;4;5;4;5;5;3;5;3;4;4;4;Tecnología;Ingeniería de Software;Ciencia de Datos e Inteligencia Artificial;5;Tecnología;1
+2;16;Masculino;Segundo de Bachillerato;Santa Rosa;3;4;3;2;4;3;3;3;3;3;3;5;2;5;4;1;3;2;3;3;3;3;5;3;3;1;1;1;1;2;1;1;4;3;Ciencias;Ingeniería de Software;Ninguna;1;Sin Definir;0
+3;15;Femenino;Primero de Bachillerato;Santa Rosa;3;3;4;5;5;3;4;5;2;1;3;2;2;5;4;3;4;3;3;3;3;3;3;4;4;3;4;5;5;5;2;3;2;2;Arte y Diseño;Diseño Gráfico;Diseño Gráfico;3;Arte y Diseño;4
+4;18;Femenino;Tercero de Bachillerato;Santa Rosa;4;1;3;5;3;3;5;5;1;3;5;5;5;5;3;4;5;5;5;5;4;5;3;4;5;5;5;4;5;5;4;5;5;5;Arte y Diseño;Arquitectura;Arquitectura;5;Arte y Diseño;4
+5;17;Masculino;Segundo de Bachillerato;Machala;5;5;5;5;4;3;4;2;5;3;5;1;3;1;4;5;4;3;3;4;4;4;2;3;4;4;4;4;4;3;2;1;5;1;Tecnología;Ingeniería de Software;Medicina;5;Salud;2
+6;17;Masculino;Tercero de Bachillerato;Santa Rosa;3;2;2;3;1;2;4;4;4;3;1;2;5;2;3;2;2;3;4;4;4;3;3;2;3;3;2;3;2;5;5;3;2;2;Salud;Psicología;Psicología;3;Ciencias Sociales;5
+7;18;Masculino;Tercero de Bachillerato;Machala;3;5;5;5;3;4;5;5;4;5;4;5;5;5;3;4;5;4;4;5;4;4;4;5;4;5;4;4;4;4;5;5;5;4;Negocios;Administración de Empresas;Administración de Empresas;5;Negocios y Administración;6
+8;17;Femenino;Tercero de Bachillerato;Machala;4;3;4;5;3;3;5;3;4;4;2;4;4;5;4;3;4;4;3;3;3;2;3;3;4;4;3;3;2;3;3;4;2;2;Salud;Medicina;Medicina;5;Salud;2
+9;18;Masculino;Tercero de Bachillerato;Machala;4;5;5;4;3;3;4;5;2;4;3;5;5;5;3;4;4;3;3;5;5;4;4;5;5;4;4;5;5;5;5;5;5;3;Tecnología;Ingeniería de Software;Actividad Física y Deporte;4;Sin definir;0
+10;15;Femenino;Primero de Bachillerato;Machala;1;1;1;2;3;1;4;4;3;3;1;1;1;5;1;3;4;3;3;3;3;4;5;2;1;1;3;1;3;3;3;3;3;1;Arte y Diseño;Otra;Diseño de Moda;3;Arte y Diseño;4
+11;18;Femenino;Tercero de Bachillerato;Machala;3;3;3;4;3;2;4;4;3;2;2;4;3;5;3;3;3;3;3;4;4;3;3;3;4;3;4;3;4;4;3;3;3;3;Otra;Otra;Veterinaria;4;Salud;2
+12;15;Femenino;Primero de Bachillerato;Machala;3;4;3;3;3;2;4;4;3;3;4;4;5;3;3;4;3;5;4;4;4;4;5;5;3;4;4;3;4;4;5;5;4;4;Salud;Medicina;Medicina;3;Salud;2
+13;17;Femenino;Tercero de Bachillerato;Machala;3;2;4;4;5;3;4;5;3;5;5;4;5;5;4;5;5;3;5;5;5;4;5;4;3;4;5;5;5;5;5;4;5;5;Salud;Medicina;Medicina;4;Salud;2
+14;15;Femenino;Primero de Bachillerato;Machala;5;1;1;4;5;4;4;5;5;5;5;2;4;3;5;4;3;2;5;5;4;3;5;1;2;2;5;2;5;3;5;5;4;3;Otra;Arquitectura;Diseño de Interiores;4;Arte y Diseño;4
+15;16;Femenino;Segundo de Bachillerato;Machala;4;3;4;2;5;3;5;5;4;5;3;5;5;5;4;4;5;3;4;3;5;5;4;3;3;3;4;3;5;5;5;5;4;4;Ciencias;Medicina;Medicina;4;Salud;2
+16;17;Femenino;Tercero de Bachillerato;Machala;1;4;4;5;4;1;5;5;2;1;1;5;5;5;1;5;5;5;3;5;3;3;3;3;1;3;3;2;5;4;2;5;3;2;Salud;Otra;Odontología;3;Salud;2
+17;16;Masculino;Segundo de Bachillerato;Machala;5;5;2;5;3;2;1;3;1;1;4;3;2;3;1;2;5;2;3;5;2;5;2;4;4;5;4;4;1;4;2;5;2;5;Tecnología;Ingeniería Civil;TICs;5;Tecnología;1
+18;15;Femenino;Primero de Bachillerato;Machala;1;1;1;5;2;1;1;5;3;5;2;5;5;5;5;5;5;5;5;5;5;4;5;3;5;5;4;5;3;5;5;5;1;1;Ciencias;Medicina;Medicina;5;Salud;2
+19;15;Masculino;Segundo de Bachillerato;Balsas;4;3;5;1;3;3;2;4;2;5;5;4;5;2;3;2;1;1;2;2;2;2;4;2;4;5;1;1;3;1;2;4;4;2;Educación;Arquitectura;Arquitectura;2;Arte y Diseño;4
+20;17;Masculino;Tercero de Bachillerato;Santa Rosa;4;5;5;4;4;5;5;5;4;3;4;5;5;5;3;4;4;4;4;5;4;5;2;4;5;5;5;5;5;5;4;4;5;5;Ingeniería;Ciencia de Datos e IA;Ciencia de Datos e Inteligencia Artificial;5;Tecnología;1
+21;18;Femenino;Tercero de Bachillerato;Piñas;1;5;5;4;4;2;3;4;5;5;5;5;5;4;2;4;3;4;5;5;5;4;4;4;4;4;4;4;4;4;3;4;4;4;Salud;Psicología;Medicina;3;Salud;2
+22;18;Femenino;Tercero de Bachillerato;Santa Rosa;2;3;2;4;3;3;5;5;3;4;3;5;5;5;2;4;5;3;4;4;3;5;4;5;4;4;4;4;4;5;4;4;4;4;Ciencias;Medicina;Medicina;5;Salud;2
+23;18;Femenino;Tercero de Bachillerato;Santa Rosa;5;5;5;5;5;5;5;5;5;3;5;5;5;5;4;4;5;4;4;4;5;5;4;4;4;5;4;4;5;5;4;5;5;5;Finanzas;Administración de Empresas;Administración de Empresas;5;Negocios y Administración;6
+24;17;Masculino;Tercero de Bachillerato;Machala;4;4;3;4;1;3;5;4;2;2;3;4;4;1;3;3;2;2;2;4;4;3;4;3;3;4;4;3;2;3;2;4;5;2;Tecnología;Ingeniería de Software;Ingeniería en Sistemas;4;Tecnología;1
+25;16;Femenino;Segundo de Bachillerato;Machala;3;4;2;4;2;3;3;3;4;4;4;4;4;4;5;4;4;4;4;5;4;4;4;4;4;4;4;4;4;4;4;4;4;4;Ingeniería;Ingeniería Civil;Ingeniería Civil;5;Ingeniería;3
+26;17;Masculino;Tercero de Bachillerato;Santa Rosa;2;2;2;2;3;2;3;3;2;1;2;3;5;4;4;4;3;4;5;3;3;4;3;3;3;2;2;2;3;3;2;3;3;3;Otra;Otra;Agronomía;5;Ciencias Naturales;7
+27;18;Femenino;Tercero de Bachillerato;Quito;5;3;5;3;5;5;5;5;3;3;3;1;5;5;5;5;5;3;3;5;5;3;5;3;3;3;3;5;3;3;3;3;4;5;Salud;Medicina;Medicina;5;Salud;2
+28;18;Masculino;Tercero de Bachillerato;Machala;4;5;5;4;4;4;5;5;5;5;5;5;5;3;4;5;3;5;4;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;Salud;Medicina;Medicina;5;Salud;2
+29;15;Femenino;Primero de Bachillerato;Santa Rosa;3;4;4;5;4;3;4;5;2;4;4;4;5;5;4;4;4;2;4;4;4;4;4;4;4;4;4;4;2;3;3;3;4;4;Finanzas;Ciencia de Datos e IA;Ciencia de Datos e Inteligencia Artificial;4;Tecnología;1
+30;18;Masculino;Tercero de Bachillerato;Machala;3;3;4;4;3;2;3;3;1;3;1;2;2;2;3;3;3;2;2;3;2;2;4;4;3;2;2;2;5;2;2;5;3;2;Derecho;Derecho;Derecho;4;Ciencias Sociales;5
+31;18;Masculino;Tercero de Bachillerato;Machala;3;5;3;5;1;3;5;3;1;1;4;5;3;2;4;3;3;4;3;4;4;3;3;5;3;3;4;4;2;5;3;3;2;4;Ingeniería;Ingeniería de Software;Ciberseguridad;5;Tecnología;1
+32;18;Masculino;Tercero de Bachillerato;Machala;4;5;5;5;3;2;5;5;5;5;5;5;5;5;3;5;5;4;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;Tecnología;Ingeniería de Software;TICs;5;Tecnología;1
+33;17;Femenino;Tercero de Bachillerato;Machala;3;3;4;4;4;3;5;5;3;5;4;4;5;2;4;4;5;4;5;5;5;5;4;3;1;2;2;3;5;4;5;5;5;5;Arte y Diseño;Arquitectura;Arquitectura;5;Arte y Diseño;4
+34;17;Femenino;Tercero de Bachillerato;Machala;1;4;4;5;3;1;5;4;4;5;3;5;5;5;1;2;4;5;4;5;4;4;5;3;4;3;4;5;4;5;5;4;4;2;Salud;Otra;Ingeniería Ambiental;3;Ingeniería;3
+35;15;Femenino;Segundo de Bachillerato;Machala;4;2;4;5;2;4;5;4;1;5;3;2;4;5;3;3;5;3;3;4;4;3;3;2;1;2;2;4;5;3;1;3;3;1;Arte y Diseño;Arquitectura;Arquitectura;5;Arte y Diseño;4
+36;17;Femenino;Tercero de Bachillerato;Machala;3;3;2;4;3;1;4;5;4;3;3;4;5;4;3;3;4;5;5;5;5;4;4;4;4;4;4;3;5;5;4;4;4;4;Salud;Medicina;Medicina;5;Salud;2
+37;18;Femenino;Tercero de Bachillerato;Machala;2;2;3;3;2;1;3;3;1;1;1;1;4;2;2;4;3;3;3;3;3;2;3;3;2;1;2;2;2;4;4;3;3;3;Educación;Educación;Educación;5;Ciencias Sociales;5
+38;17;Femenino;Tercero de Bachillerato;Machala;1;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;Negocios;Marketing;Negocios Internacionales;3;Negocios y Administración;6
+39;18;Femenino;Tercero de Bachillerato;Santa Rosa;4;1;3;1;4;5;3;1;5;4;5;3;3;1;5;2;2;1;2;1;1;1;1;2;4;2;2;4;1;2;2;2;1;3;Arte y Diseño;Marketing;Psicología;1;Ciencias Sociales;5
+40;18;Femenino;Tercero de Bachillerato;Cuenca;3;3;3;3;3;1;2;2;2;2;2;2;2;3;3;2;2;3;2;4;3;4;3;3;3;2;3;3;2;2;2;2;2;3;Ciencias;Psicología;Psicología;3;Ciencias Sociales;5
+41;18;Masculino;Tercero de Bachillerato;Machala;5;5;5;3;3;4;5;5;2;3;4;5;5;5;5;5;5;3;3;5;4;3;5;5;5;5;5;5;5;4;4;4;4;4;Ingeniería;Otra;Ingeniería Mecatrónica;5;Ingeniería;3
+42;18;Masculino;Tercero de Bachillerato;Machala;3;4;5;3;2;2;4;5;4;5;4;4;3;3;3;4;3;4;4;3;5;4;4;3;2;3;4;4;4;4;5;5;3;2;Educación;Educación;Pedagogía de Idiomas;5;Ciencias Sociales;5
+43;18;Masculino;Segundo de Bachillerato;Machala;4;3;5;4;3;3;4;5;2;4;5;4;5;3;3;5;4;3;3;4;4;2;4;3;5;5;5;3;3;4;4;4;4;4;Salud;Medicina;Medicina;5;Salud;2
+44;15;Femenino;Primero de Bachillerato;Machala;3;3;1;4;1;3;1;1;4;1;1;2;1;4;3;5;1;3;2;1;2;3;2;3;1;3;1;1;4;1;1;1;1;1;Salud;Otra;Dermatología;1;Salud;2
+45;17;Femenino;Tercero de Bachillerato;Machala;1;1;5;1;1;1;5;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;Ciencias;Medicina;Medicina;5;Salud;2
+46;17;Femenino;Tercero de Bachillerato;Machala;1;2;4;2;3;1;5;5;3;4;4;4;5;5;1;2;3;4;4;4;3;3;4;4;2;3;5;4;4;4;5;5;5;3;Salud;Medicina;Medicina;4;Salud;2
+47;16;Femenino;Tercero de Bachillerato;Machala;1;2;3;2;3;1;5;5;1;1;1;1;5;3;1;1;3;3;2;2;2;1;2;2;1;2;2;2;3;2;2;4;2;3;Salud;Medicina;Medicina;5;Salud;2
+48;18;Femenino;Tercero de Bachillerato;Machala;1;1;3;1;1;1;3;2;1;1;3;3;2;3;3;2;3;2;1;3;3;3;4;4;1;3;3;4;2;2;1;3;4;1;Ciencias;Biología;Psicología Organizacional;4;Ciencias Sociales;5
+49;18;Masculino;Tercero de Bachillerato;Machala;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;Otra;Ingeniería Civil;Ingeniería Civil;5;Ingeniería;3
+50;16;Masculino;Primero de Bachillerato;Machala;1;2;5;5;4;1;1;1;5;2;4;3;4;2;2;1;1;1;1;1;1;4;3;3;4;5;5;3;3;3;1;1;4;1;Negocios;Administración de Empresas;Economía;5;Negocios y Administración;6
+51;18;Masculino;Tercero de Bachillerato;Guayaquil;1;1;2;1;1;1;4;2;3;2;2;3;4;3;1;4;3;5;3;3;3;4;3;3;2;3;2;3;1;2;2;2;2;2;Salud;Psicología;Psicología;3;Ciencias Sociales;5
+52;16;Femenino;Primero de Bachillerato;Machala;3;4;2;2;5;1;4;3;1;1;1;4;5;5;4;3;2;3;2;4;5;1;1;1;4;4;4;3;3;1;5;5;4;4;Otra;Contabilidad;Contabilidad;4;Negocios y Administración;6
+53;15;Masculino;Tercero de Bachillerato;Machala;1;1;3;3;1;2;1;1;2;1;2;2;2;3;5;5;5;4;3;4;4;4;3;3;3;3;3;4;4;4;4;3;5;5;Tecnología;Ingeniería de Software;Psicología;5;Ciencias Sociales;5
+54;17;Masculino;Tercero de Bachillerato;Machala;2;3;3;5;4;3;5;4;4;5;5;2;5;1;2;5;5;5;5;2;3;5;5;3;2;5;5;3;5;4;4;5;5;5;Ingeniería;Otra;Acuicultura;5;Ciencias Naturales;7
+55;18;Masculino;Tercero de Bachillerato;Machala;5;5;5;4;1;5;5;5;3;3;3;5;5;5;5;5;5;3;2;4;5;5;5;5;5;5;5;5;3;3;3;3;5;4;Ingeniería;Biología;Ingeniería en Alimentos;5;Ingeniería;3
+56;17;Masculino;Tercero de Bachillerato;Machala;4;5;4;5;3;4;5;5;4;3;3;4;4;3;4;4;5;4;3;4;5;4;5;5;5;5;5;5;5;4;3;4;4;4;Tecnología;Ingeniería de Software;Ingeniería en Ciencias de la Computación;5;Tecnología;1
+57;15;Femenino;Primero de Bachillerato;Machala;1;1;1;1;1;1;2;2;5;5;1;1;4;1;1;2;2;4;5;5;3;2;1;1;1;1;1;1;1;3;5;1;1;1;Otra;Otra;Cosmetología;2;Arte y Diseño;4
+58;18;Femenino;Tercero de Bachillerato;Machala;2;5;3;2;5;2;3;3;2;1;2;2;3;3;2;2;2;3;1;3;3;3;3;4;4;3;2;5;3;3;1;2;2;2;Tecnología;Otra;Ingeniería en Alimentos;2;Ingeniería;3
+59;17;Femenino;Tercero de Bachillerato;Cuenca;1;5;5;5;5;1;5;5;2;2;5;5;5;5;1;3;5;5;1;4;4;4;1;3;4;4;4;4;5;3;2;5;4;4;Salud;Marketing;Enfermería;1;Salud;2
+60;15;Femenino;Primero de Bachillerato;Machala;5;3;2;4;5;3;5;5;3;2;3;3;5;5;3;3;5;4;3;3;5;2;4;3;5;2;3;4;5;4;4;4;4;2;Arte y Diseño;Otra;Artes Plásticas;4;Arte y Diseño;4
+61;17;Femenino;Tercero de Bachillerato;Machala;3;3;4;4;3;3;4;3;2;2;2;4;4;5;3;3;4;3;2;3;3;3;3;3;3;3;4;3;4;4;3;4;3;2;Arte y Diseño;Arquitectura;Arquitectura;3;Arte y Diseño;4
+62;16;Femenino;Segundo de Bachillerato;Machala;3;3;5;4;2;2;5;4;3;1;3;3;4;5;3;3;3;4;3;5;5;5;4;3;2;3;5;5;3;3;1;3;5;4;Ciencias Sociales;Derecho;Derecho;5;Ciencias Sociales;5
+63;18;Masculino;Tercero de Bachillerato;Machala;5;5;5;5;3;3;5;5;3;3;4;5;5;3;4;4;4;4;4;4;5;4;4;4;5;5;5;5;5;4;4;4;4;4;Comunicación;Ingeniería de Software;Enfermería;5;Salud;2
+64;18;Masculino;Tercero de Bachillerato;Machala;2;2;2;2;3;2;3;3;3;5;4;4;3;3;3;3;3;2;2;2;2;1;1;1;1;1;3;3;3;3;4;3;5;5;Tecnología;Ciencia de Datos e IA;Ingeniería Mecánica;3;Sin definir;0
+65;18;Femenino;Tercero de Bachillerato;Machala;4;1;5;3;1;3;5;5;4;3;5;5;5;3;4;5;5;5;5;5;5;5;5;5;2;3;5;5;5;5;3;5;5;5;Salud;Medicina;Medicina;5;Salud;2
+66;15;Femenino;Primero de Bachillerato;Santa Rosa;4;4;4;3;2;4;5;4;4;4;4;4;5;4;4;4;4;4;4;4;4;4;5;4;2;3;4;3;4;3;3;3;5;3;Arte y Diseño;Economía;Economía;4;Negocios y Administración;6
+67;15;Femenino;Primero de Bachillerato;Santa Rosa;1;2;2;2;2;1;4;5;2;3;3;3;5;4;2;5;4;5;5;4;5;5;5;4;4;4;4;4;4;5;5;5;5;4;Negocios;Medicina;Ninguna;5;Sin Definir;0
+68;18;Femenino;Tercero de Bachillerato;Machala;3;2;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;Ingeniería;Economía;Economía;3;Negocios y Administración;6
+69;18;Femenino;Tercero de Bachillerato;Machala;3;2;3;4;3;3;4;4;3;3;3;3;3;3;3;4;4;4;3;4;4;3;3;4;2;4;3;3;4;4;3;3;3;3;Arte y Diseño;Arquitectura;Arquitectura;4;Arte y Diseño;4
+70;15;Femenino;Primero de Bachillerato;Santa rosa;1;1;1;2;3;1;4;3;2;4;1;3;5;1;1;3;1;1;4;5;3;5;5;3;5;5;5;3;2;5;3;5;5;1;Salud;Medicina;Pediatría;4;Salud;2
+71;18;Masculino;Tercero de Bachillerato;Huaquillas;5;5;5;4;3;5;5;3;3;5;4;4;4;3;5;5;5;3;5;5;5;5;5;5;5;5;5;4;4;3;5;5;5;5;Ingeniería;Ingeniería Civil;Ingeniería Civil;5;Ingeniería;3
+72;15;Masculino;Primero de Bachillerato;Machala;2;4;3;1;5;3;5;5;1;2;3;4;5;4;2;3;3;4;3;4;4;3;3;4;5;4;5;4;4;3;3;3;4;3;Educación;Educación;Ninguna;2;Sin Definir;0
+73;18;Femenino;Tercero de Bachillerato;Guayaquil;3;2;2;2;2;2;4;5;1;1;4;4;5;5;2;3;2;1;1;3;1;5;4;3;5;2;5;5;2;2;1;1;5;2;Educación;Educación;Educación Básica;5;Ciencias Sociales;5
+74;15;Prefiero no decirlo;Primero de Bachillerato;Machala;1;4;3;3;1;1;4;1;4;1;1;4;1;5;1;2;4;1;1;3;2;3;3;3;3;3;3;3;3;3;4;4;4;2;Arte y Diseño;Otra;Veterinaria;3;Salud;2
+75;15;Femenino;Primero de Bachillerato;Guayaquil;3;5;2;5;4;2;4;5;4;5;4;2;2;2;3;4;4;5;5;4;3;4;3;5;2;3;5;3;4;3;5;5;5;3;Tecnología;Psicología;Ingeniería de Software;1;Tecnología;1
+76;17;Femenino;Tercero de Bachillerato;Machala;4;4;3;2;3;4;5;4;4;2;3;5;5;4;4;4;2;4;3;4;3;4;5;4;4;5;5;5;3;3;2;3;3;3;Salud;Medicina;Medicina;4;Salud;2
+77;18;Femenino;Tercero de Bachillerato;Machala;3;4;4;3;2;2;5;4;5;5;4;5;5;5;3;4;3;4;3;4;5;4;3;4;4;4;4;4;5;4;5;4;4;3;Otra;Medicina;Medicina;4;Salud;2
+78;17;Femenino;Tercero de Bachillerato;Machala;3;2;3;3;2;2;3;2;4;2;4;2;2;2;3;2;4;3;3;4;4;4;4;3;4;4;3;4;4;4;4;3;3;3;Finanzas;Administración de Empresas;Administración de Empresas;2;Negocios y Administración;6
+79;17;Femenino;Tercero de Bachillerato;Machala;3;4;3;2;3;2;3;4;4;4;4;3;4;1;3;3;1;4;4;4;3;4;2;4;3;4;3;4;2;4;4;4;4;3;Tecnología;Otra;Logística y Transporte;4;Negocios y Administración;6
+80;17;Femenino;Tercero de Bachillerato;Machala;2;3;4;3;3;2;5;4;4;4;3;5;4;5;2;4;4;4;4;5;5;5;4;4;3;5;5;5;4;4;4;4;4;5;Otra;Derecho;Derecho;5;Ciencias Sociales;5
+81;16;Masculino;Primero de Bachillerato;Machala;3;3;3;3;3;3;3;3;3;1;5;5;5;5;3;5;4;3;4;4;3;2;3;5;5;5;2;4;2;2;1;1;3;2;Otra;Otra;Comercio;5;Negocios y Administración;6
+82;17;Femenino;Tercero de Bachillerato;Machala;4;3;3;5;4;3;5;4;5;5;3;5;3;5;4;4;5;5;5;5;3;3;4;4;3;4;3;3;5;4;5;5;3;2;Ingeniería;Ingeniería Civil;Negocios Internacionales;2;Negocios y Administración;6
+83;17;Femenino;Tercero de Bachillerato;Machala;3;4;4;2;3;3;3;5;1;2;5;5;5;5;2;3;4;4;2;3;4;5;3;3;3;3;4;4;5;3;2;3;5;3;Otra;Psicología;Psicología;5;Ciencias Sociales;5
+84;17;Femenino;Tercero de Bachillerato;Machala;1;1;5;2;2;2;2;2;3;3;3;5;3;3;4;4;4;5;3;4;4;4;4;4;1;1;3;3;3;3;4;3;3;2;Salud;Medicina;Medicina;2;Salud;2
+85;17;Femenino;Tercero de Bachillerato;Machala;3;3;4;5;5;4;4;4;3;3;4;5;5;5;3;4;5;3;2;4;4;5;3;4;4;5;4;4;5;5;3;4;4;3;Arte y Diseño;Medicina;Medicina;4;Salud;2
+86;17;Masculino;Tercero de Bachillerato;Machala;2;1;1;1;5;1;3;5;5;5;5;2;1;1;1;3;4;5;5;5;3;5;5;5;5;5;5;5;5;5;5;5;5;5;Derecho;Derecho;Derecho;5;Ciencias Sociales;5
+87;16;Femenino;Segundo de Bachillerato;Machala;1;1;4;1;4;1;5;3;2;5;1;4;5;2;2;5;4;5;5;4;5;3;5;4;1;5;5;3;5;3;5;5;3;4;Derecho;Derecho;Derecho;4;Ciencias Sociales;5
+88;16;Femenino;Segundo de Bachillerato;Santa Rosa;4;3;3;5;5;4;5;5;5;5;5;5;5;5;4;4;5;5;5;5;5;3;4;5;5;5;5;5;5;5;5;5;3;4;Arte y Diseño;Arquitectura;Arquitectura;5;Arte y Diseño;4
+89;16;Femenino;Segundo de Bachillerato;Santa Rosa;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;Arte y Diseño;Enfermería;Informática;1;Tecnología;1
+90;17;Prefiero no decirlo;Tercero de Bachillerato;Machala;2;3;1;3;2;1;1;3;5;3;4;2;3;3;4;2;3;3;2;4;3;3;2;2;3;4;2;4;2;3;2;3;3;2;Tecnología;Diseño Gráfico;Diseño Gráfico;4;Arte y Diseño;4
+91;16;Femenino;Segundo de Bachillerato;Santa Rosa;1;2;2;3;1;1;5;5;1;1;3;4;4;5;2;2;4;2;2;2;2;2;4;3;4;2;5;2;4;3;2;2;2;2;Derecho;Derecho;Derecho;5;Ciencias Sociales;5
+92;16;Masculino;Segundo de Bachillerato;Santa Rosa;1;5;1;5;1;1;5;4;1;1;3;5;3;4;1;2;3;2;2;5;2;5;3;5;5;5;5;5;5;3;4;4;5;2;Tecnología;Ingeniería de Software;Ingeniería en Sonido;4;Tecnología;1
+93;17;Femenino;Tercero de Bachillerato;Machala;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;5;Tecnología;Ingeniería de Software;Ingeniería en Sistemas;5;Tecnología;1
+94;16;Femenino;Segundo de Bachillerato;Santa Rosa;5;5;2;5;1;5;5;4;1;3;4;2;5;5;5;5;4;2;2;4;4;3;4;5;5;5;5;4;5;5;1;5;4;5;Salud;Medicina;Medicina;2;Salud;2
+95;17;Masculino;Tercero de Bachillerato;Machala;1;5;3;3;2;2;3;1;4;1;3;2;2;2;4;1;3;5;5;5;4;2;5;2;1;3;3;3;3;4;3;3;3;1;Ingeniería;Otra;Ingeniería Agrícola;4;Ingeniería;3
+96;16;Femenino;Segundo de Bachillerato;Santa Rosa;3;4;5;3;2;2;5;3;3;2;4;5;5;4;3;3;5;4;3;3;3;4;2;4;5;5;4;5;5;3;2;5;4;4;Ciencias Sociales;Arquitectura;Odontología;3;Salud;2
+97;18;Masculino;Tercero de Bachillerato;Santa Rosa;3;3;2;3;5;2;5;4;1;2;2;4;5;3;3;3;2;3;2;5;2;2;3;4;5;5;4;4;2;3;2;2;2;1;Salud;Enfermería;Enfermería;5;Salud;2
+98;16;Femenino;Segundo de Bachillerato;Santa Rosa;1;3;2;3;2;1;4;4;2;3;3;5;3;5;1;3;4;3;2;3;3;2;1;2;3;3;2;2;3;3;2;2;2;1;Arte y Diseño;Otra;Ninguna;1;Sin Definir;0
+99;16;Femenino;Tercero de Bachillerato;Machala;5;5;5;5;5;5;5;5;3;5;5;5;5;5;5;5;5;3;4;5;5;5;5;5;5;5;5;5;5;5;4;5;5;5;Finanzas;Contabilidad;Contabilidad;3;Negocios y Administración;6
+100;16;Femenino;Segundo de Bachillerato;Santa Rosa;1;5;5;5;2;1;4;1;2;3;2;2;4;5;2;2;3;5;2;3;3;3;3;3;5;3;3;3;1;2;3;4;2;2;Tecnología;Otra;Educación;3;Ciencias Sociales;5
+101;15;Femenino;Segundo de Bachillerato;Santa Rosa;5;5;5;5;2;4;4;5;4;5;5;5;5;5;5;4;5;4;4;5;5;5;5;4;4;4;4;4;5;4;3;5;5;5;Tecnología;Ingeniería de Software;Ingeniería en Sistemas;5;Tecnología;1
+102;15;Masculino;Segundo de Bachillerato;Santa Rosa;3;4;4;3;2;2;5;4;3;1;4;5;5;5;5;5;4;3;1;4;3;4;3;3;4;5;5;5;5;4;3;4;4;3;Salud;Medicina;Odontología;5;Salud;2

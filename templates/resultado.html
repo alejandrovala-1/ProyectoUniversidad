@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Resultado del sistema inteligente de orientación vocacional"
+    >
+
+    <title>Resultado vocacional</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='estilos.css') }}"
+    >
+</head>
+
+<body class="pagina-resultado">
+
+    <!--ENCABEZADO -->
+    <header class="encabezado encabezado-resultado">
+        <div class="contenedor">
+            <p class="etiqueta">
+                Resultado del análisis
+            </p>
+
+            <h1>
+                Tu perfil vocacional
+            </h1>
+
+            <p class="subtitulo">
+                El modelo analizó tus respuestas y estimó las áreas
+                profesionales con mayor afinidad.
+            </p>
+        </div>
+    </header>
+
+
+    <!--CONTENIDO PRINCIPAL-->
+    <main class="contenedor contenido-principal">
+
+        <!-- Resultado principal -->
+        <section class="resultado-principal">
+            <p class="etiqueta">
+                Área con mayor afinidad
+            </p>
+
+            <h2>
+                {{ resultado.principal.area }}
+            </h2>
+
+            <div class="afinidad-destacada">
+                <span class="porcentaje-principal">
+                    {{ resultado.principal.porcentaje }}%
+                </span>
+
+                <div>
+                    <strong>
+                        {{ resultado.nivel_afinidad }}
+                    </strong>
+
+                    <p>
+                        Este porcentaje representa una afinidad estimada
+                        por el modelo y no una certeza absoluta.
+                    </p>
+                </div>
+            </div>
+
+            <progress
+                class="barra-resultado barra-resultado-grande"
+                value="{{ resultado.principal.porcentaje }}"
+                max="100"
+                aria-label="Afinidad principal: {{ resultado.principal.porcentaje }} por ciento"
+            >
+                {{ resultado.principal.porcentaje }}%
+            </progress>
+        </section>
+
+
+        <!-- Perfil combinado -->
+        {% if resultado.perfil_combinado and resultado.segunda %}
+            <section class="alerta alerta-info">
+                <h2>
+                    Perfil vocacional combinado
+                </h2>
+
+                <p>
+                    La diferencia entre
+                    <strong>{{ resultado.principal.area }}</strong>
+                    y
+                    <strong>{{ resultado.segunda.area }}</strong>
+                    es de solo
+                    <strong>{{ resultado.diferencia }} puntos porcentuales</strong>.
+                    Esto indica que tus intereses podrían relacionarse
+                    con ambas áreas.
+                </p>
+            </section>
+        {% endif %}
+
+
+        <!-- Top 3 de áreas -->
+        <section class="seccion-resultado">
+            <div class="titulo-seccion">
+                <p class="etiqueta">
+                    Principales coincidencias
+                </p>
+
+                <h2>
+                    Tus tres áreas con mayor afinidad
+                </h2>
+            </div>
+
+            <div class="top-areas">
+                {% for area in resultado.top_3 %}
+                    <article class="tarjeta-area">
+                        <div class="cabecera-area">
+                            <span
+                                class="posicion"
+                                aria-label="Posición {{ loop.index }}"
+                            >
+                                {{ loop.index }}
+                            </span>
+
+                            <div class="informacion-area">
+                                <h3>
+                                    {{ area.area }}
+                                </h3>
+
+                                <p>
+                                    {{ area.porcentaje }}% de afinidad
+                                </p>
+                            </div>
+                        </div>
+
+                        <progress
+                            class="barra-resultado"
+                            value="{{ area.porcentaje }}"
+                            max="100"
+                            aria-label="Afinidad con {{ area.area }}: {{ area.porcentaje }} por ciento"
+                        >
+                            {{ area.porcentaje }}%
+                        </progress>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+
+
+        <!-- Interpretación y recomendación -->
+        <div class="rejilla-resultados">
+            <section class="seccion-resultado tarjeta-contenido">
+                <p class="etiqueta">
+                    Interpretación
+                </p>
+
+                <h2>
+                    ¿Qué significa este resultado?
+                </h2>
+
+                <p>
+                    {{ resultado.explicacion }}
+                </p>
+            </section>
+
+            <section class="seccion-resultado tarjeta-contenido">
+                <p class="etiqueta">
+                    Próximo paso
+                </p>
+
+                <h2>
+                    Recomendación
+                </h2>
+
+                <p>
+                    {{ resultado.recomendacion }}
+                </p>
+            </section>
+        </div>
+
+
+        <!-- Carreras sugeridas -->
+        <section class="seccion-resultado">
+            <div class="titulo-seccion">
+                <p class="etiqueta">
+                    Carreras sugeridas
+                </p>
+
+                <h2>
+                    Opciones que puedes investigar
+                </h2>
+
+                <p>
+                    Estas opciones pertenecen al área con mayor afinidad
+                    y sirven como punto de partida para tu exploración.
+                </p>
+            </div>
+
+            {% if resultado.carreras %}
+                <div class="lista-carreras">
+                    {% for carrera in resultado.carreras %}
+                        <article class="tarjeta-carrera">
+                            <span
+                                class="marca-carrera"
+                                aria-hidden="true"
+                            >
+                                ✓
+                            </span>
+
+                            <span>
+                                {{ carrera }}
+                            </span>
+                        </article>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="mensaje-sin-datos">
+                    No hay carreras registradas para esta área.
+                </p>
+            {% endif %}
+        </section>
+
+
+        <!-- Nota importante -->
+        <section class="nota-final">
+            <h2>
+                ATENCION
+            </h2>
+
+            <p>
+                Este resultado es una guía de apoyo para tu proceso de
+                orientación vocacional. El modelo fue entrenado con una
+                muestra limitada de estudiantes, por lo que el resultado
+                debe complementarse con la reflexión personal, la
+                investigación de carreras y, cuando sea posible, la
+                orientación de un profesionaL.
+            </p>
+            <p>Gracias.</p>
+        </section>
+
+
+        <!-- Acciones -->
+        <div class="acciones-resultado">
+            <a
+                href="{{ url_for('inicio') }}"
+                class="boton-principal enlace-boton"
+            >
+                Realizar nuevamente el cuestionario
+            </a>
+        </div>
+
+    </main>
+
+
+    <!--PIE DE PÁGINA-->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>
+                Diseño de un prototipo de sistema de inteligencia artificial para la recomendación de carreras universitarias.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

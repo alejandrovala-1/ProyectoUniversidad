@@ -1,0 +1,33 @@
+Modelo seleccionado: Extra Trees
+Registros totales: 102
+Registros de entrenamiento: 81
+Registros de prueba: 21
+Variables utilizadas: 34
+Accuracy: 0.2381
+Accuracy balanceada: 0.2143
+F1 ponderado: 0.2150
+
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         1
+           1       0.33      0.33      0.33         3
+           2       0.25      0.33      0.29         6
+           3       0.00      0.00      0.00         2
+           4       0.33      0.33      0.33         3
+           5       0.00      0.00      0.00         4
+           6       0.33      0.50      0.40         2
+
+    accuracy                           0.24        21
+   macro avg       0.18      0.21      0.19        21
+weighted avg       0.20      0.24      0.21        21
+
+Matriz de confusión:
+[[0 0 1 0 0 0 0 0]
+ [0 1 1 0 0 0 1 0]
+ [0 1 2 0 1 1 1 0]
+ [0 1 1 0 0 0 0 0]
+ [1 0 1 0 1 0 0 0]
+ [1 0 2 0 1 0 0 0]
+ [0 0 0 0 0 1 1 0]
+ [0 0 0 0 0 0 0 0]]
